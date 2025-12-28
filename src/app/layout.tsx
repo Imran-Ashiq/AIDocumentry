@@ -15,9 +15,10 @@ const geistMono = Geist_Mono({
 
 // Define the base URL for metadata. 
 // In production (Heroku), set the NEXT_PUBLIC_APP_URL environment variable.
+// Fallback to the known Heroku URL if env var is missing.
 const baseUrl = process.env.NEXT_PUBLIC_APP_URL 
   ? new URL(process.env.NEXT_PUBLIC_APP_URL) 
-  : new URL('http://localhost:3000');
+  : new URL('https://ai-documentary-imran-8c699078b06e.herokuapp.com');
 
 export const metadata: Metadata = {
   metadataBase: baseUrl,
