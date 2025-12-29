@@ -33,11 +33,20 @@ export const metadata: Metadata = {
     siteName: "The Rise of AI",
     type: "website",
     locale: 'en_US',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: "The Rise of AI (Without Hype)",
+      }
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: "The Rise of AI (Without Hype)",
     description: "Understanding AI evolution without the hype.",
+    images: ['/og-image.png'],
   },
   alternates: {
     canonical: baseUrl,
