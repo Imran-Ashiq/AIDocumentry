@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
  
-export const runtime = 'edge'
+// Use default runtime (Node.js) for better compatibility on Heroku
+// export const runtime = 'edge'
  
 export const alt = 'The Rise of AI (Without Hype)'
 export const size = {
