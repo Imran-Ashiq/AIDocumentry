@@ -20,6 +20,8 @@ const baseUrl = process.env.NEXT_PUBLIC_APP_URL
   ? new URL(process.env.NEXT_PUBLIC_APP_URL) 
   : new URL('https://ai-documentary-imran-8c699078b06e.herokuapp.com');
 
+const ogImageUrl = `${baseUrl.origin}/og-image.png`;
+
 export const metadata: Metadata = {
   metadataBase: baseUrl,
   title: "The Rise of AI (Without Hype)",
@@ -29,16 +31,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Rise of AI (Without Hype)",
     description: "Understanding AI evolution without the hype. An interactive web documentary.",
-    url: baseUrl,
+    url: baseUrl.origin,
     siteName: "The Rise of AI",
     type: "website",
     locale: 'en_US',
     images: [
       {
-        url: '/og-image.png',
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: "The Rise of AI (Without Hype)",
+        type: 'image/png',
       }
     ],
   },
@@ -46,7 +49,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "The Rise of AI (Without Hype)",
     description: "Understanding AI evolution without the hype.",
-    images: ['/og-image.png'],
+    images: [ogImageUrl],
   },
   alternates: {
     canonical: baseUrl,
